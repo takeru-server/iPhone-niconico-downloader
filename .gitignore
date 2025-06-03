@@ -192,3 +192,29 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+
+# ---- ここから追記 ----
+
+# Sensitive user files (ニコニコ動画のクッキーなど)
+cookies.txt
+*.cookie
+*credentials*
+
+# Downloaded media files (ダウンロードした動画やサムネイル)
+# 必要に応じて具体的な拡張子やディレクトリを追加・変更してください
+*.mp4
+*.mkv
+*.webm
+*.ts
+*.flv
+*.jpg
+*.jpeg
+*.png
+*.gif
+# もし特定のフォルダに保存するなら、そのフォルダ名も
+# (例: niconico_downloads/ や videos/ など)
+# GitHubのデフォルトに `downloads/` が既にあるので、それを使うなら個別指定は不要な場合も
+# output/ # もし "output" という名前のフォルダを使うなら
+
+# ---- 追記ここまで ----
