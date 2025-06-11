@@ -10,8 +10,8 @@ pkg update ffmpeg > /dev/null 2>&1
 
 # --- メイン処理 ---
 # 引数からCookieとURLを受け取る
-COOKIE="$1"
-URL="$2"
+COOKIE="$0"
+URL="$1"
 
 # ダウンロード先のフォルダを定義し、なければ作成
 DOWNLOAD_DIR="$HOME/Documents/NicoNico"
