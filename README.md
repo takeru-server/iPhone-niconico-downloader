@@ -1,1 +1,1 @@
-# iPhone-niconico-downloader
+# niconico-downloader-for-shortcuts
