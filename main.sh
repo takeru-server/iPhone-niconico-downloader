@@ -21,15 +21,15 @@ echo "2/3: Starting download..."
 echo "========================================"
 
 # yt-dlpを実行
-#yt-dlp \
-#    -P "$DOWNLOAD_DIR" \
-#    --add-header "Cookie: $COOKIE" \
-#    -f "bestvideo[height>=1080]+bestaudio/best" \
-#    --merge-output-format mp4 \
-#    --embed-thumbnail \
-#    --no-mtime \
-#    --progress \
-#    "$URL"
+# yt-dlp \
+#     -P "$DOWNLOAD_DIR" \
+#     --add-header "Cookie: $COOKIE" \
+#     -f "bestvideo[height>=1080]+bestaudio/best" \
+#     --merge-output-format mp4 \
+#     --embed-thumbnail \
+#     --no-mtime \
+#     --progress \
+#     "$URL"
 
 # yt-dlpを実行（1行に修正）
 yt-dlp -P "$DOWNLOAD_DIR" --add-header "Cookie: $COOKIE" -f "bestvideo[height>=1080]+bestaudio/best" --merge-output-format mp4 --embed-thumbnail --no-mtime --progress "$URL"
