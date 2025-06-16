@@ -6,8 +6,8 @@ from pathlib import Path
 import tempfile
 
 # --- プレースホルダー (この部分がショートカットで置換される) ---
-COOKIE_DATA = "__COOKIE_PLACEHOLDER__"
-VIDEO_URL = "__URL_PLACEHOLDER__"
+COOKIE_DATA = "cwr_s=eyJzZXNzaW9uSWQiOiJhY2EyZjdjZi02MWVhLTQwY2UtYjNiMi02NWRiOTJhOTE3ZWIiLCJyZWNvcmQiOmZhbHNlLCJldmVudENvdW50IjoxODQsInBhZ2UiOnsicGFnZUlkIjoiL3dhdGNoL3NtMjA4Mzc0MjUiLCJwYXJlbnRQYWdlSWQiOiIvIiwiaW50ZXJhY3Rpb24iOjEsInJlZmVycmVyIjoiaHR0cHM6Ly9zcC5uaWNvdmlkZW8uanAvbXkvaGlzdG9yeS92aWRlbz9jbW5oZF9yZWY9ZGV2aWNlJTNEc3AlMjZzaXRlJTNEc3BuaWNvbmljbyUyNnBvcyUzRHVzZXJwYW5lbCUyNnBhZ2UlM0RyYW5raW5nIiwicmVmZXJyZXJEb21haW4iOiJzcC5uaWNvdmlkZW8uanAiLCJzdGFydCI6MTc1MDA0MzMzNTk3Mn19; cwr_u=aa4335e3-ce49-4b11-b7e0-63dc96b58862; common-header-oshirasebox-new-allival=false; lastViewedRanking=%7B%22type%22%3A%22for-you%22%7D; _ss_pp_id=8fec9ca6326026b07911749441939818; _td=5dbaf9c0-618a-4a13-9a0b-b7b3a3ebeb0a; nicosid=1747657249.4171874428"
+VIDEO_URL = "https://sp.nicovideo.jp/watch/sm20837425?ref=my_history"
 
 # --- 設定 ---
 DOWNLOAD_DIR = Path.home() / "Documents" / "NicoNico"
@@ -32,7 +32,7 @@ def main():
     """メインのダウンロード処理"""
     # 【重要】安全装置のロジックを修正
     # 変数の中身が、元のプレースホルダーと完全に一致する場合のみエラーとする
-    if COOKIE_DATA == "__COOKIE_PLACEHOLDER__" or VIDEO_URL == "__URL_PLACEHOLDER__":
+    if COOKIE_DATA == "cwr_s=eyJzZXNzaW9uSWQiOiJhY2EyZjdjZi02MWVhLTQwY2UtYjNiMi02NWRiOTJhOTE3ZWIiLCJyZWNvcmQiOmZhbHNlLCJldmVudENvdW50IjoxODQsInBhZ2UiOnsicGFnZUlkIjoiL3dhdGNoL3NtMjA4Mzc0MjUiLCJwYXJlbnRQYWdlSWQiOiIvIiwiaW50ZXJhY3Rpb24iOjEsInJlZmVycmVyIjoiaHR0cHM6Ly9zcC5uaWNvdmlkZW8uanAvbXkvaGlzdG9yeS92aWRlbz9jbW5oZF9yZWY9ZGV2aWNlJTNEc3AlMjZzaXRlJTNEc3BuaWNvbmljbyUyNnBvcyUzRHVzZXJwYW5lbCUyNnBhZ2UlM0RyYW5raW5nIiwicmVmZXJyZXJEb21haW4iOiJzcC5uaWNvdmlkZW8uanAiLCJzdGFydCI6MTc1MDA0MzMzNTk3Mn19; cwr_u=aa4335e3-ce49-4b11-b7e0-63dc96b58862; common-header-oshirasebox-new-allival=false; lastViewedRanking=%7B%22type%22%3A%22for-you%22%7D; _ss_pp_id=8fec9ca6326026b07911749441939818; _td=5dbaf9c0-618a-4a13-9a0b-b7b3a3ebeb0a; nicosid=1747657249.4171874428" or VIDEO_URL == "https://sp.nicovideo.jp/watch/sm20837425?ref=my_history":
         print("エラー: スクリプト内のクッキーまたはURLが正しく置換されませんでした。")
         print("ショートカットの設定を確認してください。")
         sys.exit(1)
